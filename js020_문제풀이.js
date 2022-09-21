@@ -6,12 +6,9 @@
    10
  */
 
-let num = 10;
-if (num % 10 == 0) {
-  console.log("1");
-} else {
-  console.log("0");
-}
+let num1 = 10;
+let num2 = num1 % 10 == 0 ? 1 : 0;
+console.log(num2);
 
 /*
   [문제2]
@@ -23,10 +20,11 @@ if (num % 10 == 0) {
     필요한 바구니의 수 : 13
  */
 
-let A = 123;
-let B = 10;
-let result = A / B;
-console.log(`필요한 바구니의 수 : ${result}`);
+let A = 123; //사과의 수
+let B = 10; //하나의 바구니에 담는 사과수
+let NB; //필요한 바구니의 수
+NB = A % B == 0 ? parseInt(A / B) : parseInt(A / B) + 1;
+console.log(`필요한 바구니의 수 : ${NB}`);
 
 /*
   [문제3]
@@ -79,7 +77,18 @@ console.log(`차량번호의 끝자리가 ${num}인 차량은 ${day} 운행을 �
  */
 
 let year = 2001;
-for (; year <= 2012; year++) {}
+for (; year <= 2012; year++) {
+  if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) {
+    console.log(`${year}`);
+  }
+}
+
+for (let year2 = 2001; year2 <= 2012; year2++) {
+  let yearc = (year2 % 4 == 0 && year2 % 100 != 0) || year2 % 400 == 0;
+  if (yearc) {
+    console.log(`${year2}`);
+  }
+}
 
 /*  
  [문제5]

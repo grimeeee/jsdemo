@@ -6,6 +6,13 @@ while(조건식){
 }
 */
 
+/*
+while문은 조건식을 생략할 수 없다.
+while(true){
+  console.log('test');
+}
+*/
+
 for (let i = 1; i <= 5; i++) {
   console.log(i);
 }
