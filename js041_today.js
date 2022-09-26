@@ -1,14 +1,14 @@
-let chk = true;
 let today = document.getElementsByTagName("button")[0];
-today.onclick = process;
-
-function process() {
+today.onclick = function setInnerHTML() {
   let date = new Date();
-  let ptoday = document.getElementsByTagName("p")[0];
-  if (chk) {
-    ptoday = today;
-    chk = false;
-    ptoday = document.querySelector("#ptoday");
-    console.log(date.getFullYear(), date.getMonth() + 1, date.getDate());
-  }
-}
+  let yyyy = date.getFullYear();
+  let mm = date.getMonth() + 1;
+  let dd = date.getDate();
+  let hh = date.getHours();
+  let mn = date.getMinutes();
+  let ss = date.getSeconds();
+
+  let element = document.getElementsByTagName("p")[0];
+  element.innerHTML =
+    yyyy + "-" + mm + "-" + dd + "- " + " " + hh + ":" + mn + ":" + ss;
+};
